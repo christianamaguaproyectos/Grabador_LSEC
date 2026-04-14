@@ -1,0 +1,29 @@
+timestamp,nombre_participante,nombre_sena,numero_repeticion,ruta_video,duracion_segundos,total_frames,tasa_deteccion_mediapipe,frames_manos_detectadas,estado
+2026-04-10 10:26:04,Ismael,hola,1,dataset\hola\Ismael_rep01.mp4,3.03,66,15.2,10,completado
+2026-04-10 10:26:14,Ismael,hola,2,dataset\hola\Ismael_rep02.mp4,3.03,51,98.0,50,completado
+2026-04-10 10:26:24,Ismael,hola,3,dataset\hola\Ismael_rep03.mp4,3.05,49,100.0,49,completado
+2026-04-10 10:26:34,Ismael,hola,4,dataset\hola\Ismael_rep04.mp4,3.01,59,39.0,23,completado
+2026-04-10 10:26:45,Ismael,hola,5,dataset\hola\Ismael_rep05.mp4,3.01,85,0.0,0,completado
+2026-04-10 14:57:30,ismael,hola,1,dataset\hola\ismael_rep01.mp4,3.01,64,100.0,64,completado
+2026-04-10 14:57:40,ismael,hola,2,dataset\hola\ismael_rep02.mp4,3.00,65,100.0,65,completado
+2026-04-10 14:57:53,ismael,hola,3,dataset\hola\ismael_rep03.mp4,3.03,66,92.4,61,completado
+2026-04-10 14:58:03,ismael,hola,4,dataset\hola\ismael_rep04.mp4,3.04,62,100.0,62,completado
+2026-04-10 14:58:18,ismael,hola,5,dataset\hola\ismael_rep05.mp4,3.01,67,100.0,67,completado
+2026-04-13T13:19:57.816336,ismael,hola,7,dataset\hola\ismael_rep07.mp4,3.036,49,81.63,40,completado
+2026-04-13T13:20:07.864466,ismael,hola,8,dataset\hola\ismael_rep08.mp4,3.022,50,80.0,40,completado
+2026-04-13T13:20:17.949496,ismael,hola,9,dataset\hola\ismael_rep09.mp4,3.019,48,91.67,44,completado
+2026-04-13T13:20:33.992514,ismael,hola,10,dataset\hola\ismael_rep10.mp4,3.029,90,0.0,0,completado
+2026-04-13T13:20:44.048365,ismael,hola,11,dataset\hola\ismael_rep11.mp4,3.019,90,0.0,0,completado
+2026-04-13T13:20:54.109135,ismael,hola,12,dataset\hola\ismael_rep12.mp4,3.026,91,0.0,0,completado
+2026-04-13T13:21:04.162147,ismael,hola,13,dataset\hola\ismael_rep13.mp4,3.025,90,0.0,0,completado
+2026-04-13T13:21:20.242107,ismael,hola,14,dataset\hola\ismael_rep14.mp4,3.0,81,0.0,0,completado
+2026-04-14T09:39:43.041840,Ismael,hola,15,dataset\hola\Ismael_rep15.mp4,3.017,67,80.6,54,completado
+2026-04-14T09:39:53.126272,Ismael,hola,16,dataset\hola\Ismael_rep16.mp4,3.015,78,35.9,28,completado
+2026-04-14T09:40:04.700565,Ismael,hola,16,dataset\hola\Ismael_rep16.mp4,3.019,75,60.0,45,completado
+2026-04-14T09:57:19.322525,Ismael,hola,17,dataset\hola\Ismael_rep17.mp4,3.006,89,0.0,0,completado
+2026-04-14T09:57:30.219315,Ismael,hola,17,dataset\hola\Ismael_rep17.mp4,3.012,76,0.0,0,completado
+2026-04-14T09:57:40.325228,Ismael,hola,18,dataset\hola\Ismael_rep18.mp4,3.04,68,0.0,0,completado
+2026-04-14T09:57:50.353488,Ismael,hola,19,dataset\hola\Ismael_rep19.mp4,3.002,68,0.0,0,completado
+2026-04-14T09:58:00.430904,Ismael,hola,20,dataset\hola\Ismael_rep20.mp4,3.006,71,0.0,0,completado
+2026-04-14T10:08:04.446669,ismael,hola,1,dataset\hola\ismael_rep01.mp4,3.009,75,56.0,42,completado
+2026-04-14T10:08:14.523316,ismael,hola,2,dataset\hola\ismael_rep02.mp4,3.013,75,57.33,43,completado

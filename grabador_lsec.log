@@ -1,0 +1,171 @@
+2026-04-10 09:27:32 [INFO] utils.validators: Verificando disponibilidad de cámara (índice: 0)...
+2026-04-10 09:27:35 [INFO] utils.validators: Cámara verificada correctamente.
+2026-04-10 09:27:35 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'.
+2026-04-10 09:27:40 [INFO] utils.validators: Directorio del dataset verificado: 'dataset'.
+2026-04-10 09:28:08 [INFO] utils.validators: Verificando disponibilidad de cámara (índice: 0)...
+2026-04-10 09:28:10 [INFO] utils.validators: Cámara verificada correctamente.
+2026-04-10 09:28:10 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'.
+2026-04-10 09:28:12 [INFO] utils.validators: Directorio del dataset verificado: 'dataset'.
+2026-04-10 10:25:48 [INFO] utils.validators: Verificando disponibilidad de cámara (índice: 0)...
+2026-04-10 10:25:50 [INFO] utils.validators: Cámara verificada correctamente.
+2026-04-10 10:25:50 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'.
+2026-04-10 10:25:54 [INFO] utils.validators: Directorio del dataset verificado: 'dataset'.
+2026-04-10 10:25:56 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-10 10:25:56 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-10 10:25:56 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-10 10:25:56 [INFO] data.session_log: Archivo CSV de sesión creado: 'session_log.csv'.
+2026-04-10 10:25:56 [INFO] recorder.session_recorder: Iniciando sesión de grabación. Participante: Ismael, Señas: 103, Repeticiones por seña: 30, Total videos: 3090.
+2026-04-10 10:26:04 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep01.mp4 (frames: 66, detección: 15.2%)
+2026-04-10 10:26:14 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep02.mp4 (frames: 51, detección: 98.0%)
+2026-04-10 10:26:24 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep03.mp4 (frames: 49, detección: 100.0%)
+2026-04-10 10:26:34 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep04.mp4 (frames: 59, detección: 39.0%)
+2026-04-10 10:26:45 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep05.mp4 (frames: 85, detección: 0.0%)
+2026-04-10 10:26:45 [INFO] __main__: Señal de interrupción recibida. Cerrando...
+2026-04-10 10:26:45 [INFO] data.session_log: Archivo CSV de sesión cerrado correctamente.
+2026-04-10 10:26:45 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-10 10:26:45 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-10 14:57:10 [INFO] utils.validators: Verificando disponibilidad de cámara (índice: 0)...
+2026-04-10 14:57:12 [INFO] utils.validators: Cámara verificada correctamente.
+2026-04-10 14:57:12 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'.
+2026-04-10 14:57:20 [INFO] utils.validators: Directorio del dataset verificado: 'dataset'.
+2026-04-10 14:57:21 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-10 14:57:22 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-10 14:57:22 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-10 14:57:22 [INFO] data.session_log: Archivo CSV de sesión existente, se agregarán registros: 'session_log.csv'.
+2026-04-10 14:57:22 [INFO] recorder.session_recorder: Iniciando sesión de grabación. Participante: ismael, Señas: 103, Repeticiones por seña: 30, Total videos: 3090.
+2026-04-10 14:57:30 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep01.mp4 (frames: 64, detección: 100.0%)
+2026-04-10 14:57:40 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep02.mp4 (frames: 65, detección: 100.0%)
+2026-04-10 14:57:43 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-10 14:57:46 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-10 14:57:53 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep03.mp4 (frames: 66, detección: 92.4%)
+2026-04-10 14:57:54 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:03 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep04.mp4 (frames: 62, detección: 100.0%)
+2026-04-10 14:58:05 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:08 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:10 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:18 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep05.mp4 (frames: 67, detección: 100.0%)
+2026-04-10 14:58:20 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:23 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:23 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-10 14:58:29 [INFO] __main__: Señal de interrupción recibida. Cerrando...
+2026-04-10 14:58:29 [INFO] data.session_log: Archivo CSV de sesión cerrado correctamente.
+2026-04-10 14:58:29 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-10 14:58:30 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-13 13:11:21 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-13 13:11:21 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-13 13:12:51 [INFO] __main__: Sesión previa detectada. Videos existentes: 6. Retomando desde seña 'hola' (índice 0), repetición 7.
+2026-04-13 13:12:51 [INFO] utils.validators: Directorio de dataset verificado: C:\Users\camagua\Documents\MIC Desarrollo\grabador_lsec\dataset
+2026-04-13 13:13:08 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-13 13:13:09 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-13 13:13:09 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-13 13:13:09 [INFO] data.session_log: Anexando al archivo de log existente: session_log.csv
+2026-04-13 13:13:09 [INFO] data.session_log: Log de sesion cerrado. 0 registros escritos.
+2026-04-13 13:13:09 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-13 13:13:09 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-13 13:16:27 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-13 13:16:27 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-13 13:16:36 [INFO] __main__: Sesión previa detectada. Videos existentes: 6. Retomando desde seña 'hola' (índice 0), repetición 7.
+2026-04-13 13:16:36 [INFO] utils.validators: Directorio de dataset verificado: C:\Users\camagua\Documents\MIC Desarrollo\grabador_lsec\dataset
+2026-04-13 13:16:39 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-13 13:16:39 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-13 13:16:39 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-13 13:16:39 [INFO] data.session_log: Anexando al archivo de log existente: session_log.csv
+2026-04-13 13:16:39 [INFO] data.session_log: Log de sesion cerrado. 0 registros escritos.
+2026-04-13 13:16:39 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-13 13:16:39 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-13 13:19:37 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-13 13:19:37 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-13 13:19:48 [INFO] __main__: Sesión previa detectada. Videos existentes: 6. Retomando desde seña 'hola' (índice 0), repetición 7.
+2026-04-13 13:19:48 [INFO] utils.validators: Directorio de dataset verificado: C:\Users\camagua\Documents\MIC Desarrollo\grabador_lsec\dataset
+2026-04-13 13:19:49 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-13 13:19:49 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-13 13:19:49 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-13 13:19:49 [INFO] data.session_log: Anexando al archivo de log existente: session_log.csv
+2026-04-13 13:19:49 [INFO] recorder.session_recorder: Iniciando sesión de grabación. Participante: ismael, Señas: 103, Repeticiones por seña: 30, Total videos: 3090.
+2026-04-13 13:19:57 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep07.mp4 (frames: 49, detección: 81.6%)
+2026-04-13 13:20:07 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep08.mp4 (frames: 50, detección: 80.0%)
+2026-04-13 13:20:17 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep09.mp4 (frames: 48, detección: 91.7%)
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Eliminando video parcial por estado 'repetir': dataset\hola\ismael_rep10.mp4
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Repitiendo la toma actual.
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:25 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:20:33 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep10.mp4 (frames: 90, detección: 0.0%)
+2026-04-13 13:20:44 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep11.mp4 (frames: 90, detección: 0.0%)
+2026-04-13 13:20:54 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep12.mp4 (frames: 91, detección: 0.0%)
+2026-04-13 13:21:04 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep13.mp4 (frames: 90, detección: 0.0%)
+2026-04-13 13:21:09 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:21:10 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:21:12 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma (tecla R).
+2026-04-13 13:21:20 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep14.mp4 (frames: 81, detección: 0.0%)
+2026-04-13 13:21:21 [INFO] __main__: Señal de interrupción recibida. Cerrando...
+2026-04-13 13:21:21 [INFO] data.session_log: Log de sesion cerrado. 8 registros escritos.
+2026-04-13 13:21:21 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-13 13:21:22 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-14 09:04:59 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-14 09:04:59 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-14 09:39:23 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-14 09:39:23 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-14 09:39:31 [INFO] __main__: Sesión previa detectada. Videos existentes: 14. Retomando desde seña 'hola' (índice 0), repetición 15.
+2026-04-14 09:39:31 [INFO] utils.validators: Directorio de dataset verificado: C:\Users\camagua\Documents\MIC Desarrollo\grabador_lsec\dataset
+2026-04-14 09:39:33 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-14 09:39:33 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-14 09:39:33 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-14 09:39:33 [INFO] data.session_log: Anexando al archivo de log existente: session_log.csv
+2026-04-14 09:39:33 [INFO] recorder.session_recorder: Iniciando sesión de grabación. Participante: Ismael, Señas: 103, Repeticiones por seña: 30, Total videos: 3090.
+2026-04-14 09:39:37 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:39:38 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:39:43 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep15.mp4 (frames: 67, detección: 80.6%)
+2026-04-14 09:39:53 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep16.mp4 (frames: 78, detección: 35.9%)
+2026-04-14 09:39:56 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma anterior (tecla R).
+2026-04-14 09:39:56 [INFO] recorder.session_recorder: Video eliminado para regrabar: dataset\hola\Ismael_rep16.mp4
+2026-04-14 09:39:56 [INFO] recorder.session_recorder: Retrocediendo a hola repetición 16.
+2026-04-14 09:40:04 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep16.mp4 (frames: 75, detección: 60.0%)
+2026-04-14 09:40:07 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:41:17 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:41:19 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:41:37 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:41:38 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:41:38 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:41:39 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:57:10 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:57:12 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 09:57:17 [INFO] recorder.session_recorder: Sesión reanudada (Manual).
+2026-04-14 09:57:19 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep17.mp4 (frames: 89, detección: 0.0%)
+2026-04-14 09:57:22 [INFO] recorder.session_recorder: Usuario solicitó repetir la toma anterior (tecla R).
+2026-04-14 09:57:22 [INFO] recorder.session_recorder: Video eliminado para regrabar: dataset\hola\Ismael_rep17.mp4
+2026-04-14 09:57:22 [INFO] recorder.session_recorder: Retrocediendo a hola repetición 17.
+2026-04-14 09:57:30 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep17.mp4 (frames: 76, detección: 0.0%)
+2026-04-14 09:57:40 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep18.mp4 (frames: 68, detección: 0.0%)
+2026-04-14 09:57:50 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep19.mp4 (frames: 68, detección: 0.0%)
+2026-04-14 09:58:00 [INFO] recorder.session_recorder: Video guardado: dataset\hola\Ismael_rep20.mp4 (frames: 71, detección: 0.0%)
+2026-04-14 09:58:09 [INFO] __main__: Señal de interrupción recibida. Cerrando...
+2026-04-14 09:58:09 [INFO] data.session_log: Log de sesion cerrado. 8 registros escritos.
+2026-04-14 09:58:09 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-14 09:58:09 [INFO] recorder.camera: Cámara cerrada correctamente.
+2026-04-14 10:06:26 [INFO] utils.validators: Cámara validada correctamente en el índice 0
+2026-04-14 10:06:26 [INFO] utils.validators: Se cargaron 103 señas desde 'lista_senas.txt'
+2026-04-14 10:07:50 [INFO] utils.validators: Directorio de dataset verificado: C:\Users\camagua\Documents\MIC Desarrollo\grabador_lsec\dataset
+2026-04-14 10:07:56 [INFO] recorder.camera: Abriendo cámara (índice: 0)...
+2026-04-14 10:07:56 [INFO] recorder.camera: Cámara abierta. Resolución: 640x480.
+2026-04-14 10:07:56 [INFO] recorder.mediapipe_detector: MediaPipe Hands inicializado (detección: 0.7, seguimiento: 0.5, max manos: 2).
+2026-04-14 10:07:56 [INFO] data.session_log: Anexando al archivo de log existente: session_log.csv
+2026-04-14 10:07:56 [INFO] recorder.session_recorder: Iniciando sesión de grabación. Participante: ismael, Señas: 103, Repeticiones por seña: 10, Total videos: 1030.
+2026-04-14 10:08:04 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep01.mp4 (frames: 75, detección: 56.0%)
+2026-04-14 10:08:14 [INFO] recorder.session_recorder: Video guardado: dataset\hola\ismael_rep02.mp4 (frames: 75, detección: 57.3%)
+2026-04-14 10:08:17 [INFO] recorder.session_recorder: Sesión en pausa.
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: Usuario solicitó salir desde pausa.
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: ==================================================
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: RESUMEN DE SESIÓN
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: ==================================================
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: Videos grabados: 2
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: Tiempo total: 331 segundos
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: Señas completadas: 0 de 103
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: Carpetas creadas: 1
+2026-04-14 10:13:27 [INFO] recorder.session_recorder: ==================================================
+2026-04-14 10:13:32 [INFO] data.session_log: Log de sesion cerrado. 2 registros escritos.
+2026-04-14 10:13:32 [INFO] recorder.mediapipe_detector: MediaPipe Hands cerrado correctamente.
+2026-04-14 10:13:32 [INFO] recorder.camera: Cámara cerrada correctamente.
