@@ -40,7 +40,7 @@ def validar_camara(indice_camara: int = INDICE_CAMARA) -> bool:
     return True
 
 
-def cargar_lista_senas(ruta_archivo: str = ARCHIVO_LISTA_SENAS) -> list[str]:
+def cargar_lista_senas(ruta_archivo = ARCHIVO_LISTA_SENAS) -> list[str]:
     """Carga y valida el archivo de lista de señas.
 
     Args:
@@ -57,62 +57,7 @@ def cargar_lista_senas(ruta_archivo: str = ARCHIVO_LISTA_SENAS) -> list[str]:
 
     if not ruta.exists():
         raise FileNotFoundError(
-            f"El archivo de señas '{ruta_archivo}' no existe. "
-            f"Crea el archivo con una seña por línea."
-        )
-
-    lineas_crudas = ruta.read_text(encoding="utf-8").splitlines()
-
-    # Limpiar: quitar espacios, convertir a minúsculas, eliminar vacías
-    senas = []
-    for linea in lineas_crudas:
-        limpia = linea.strip().lower()
-        if limpia:
-            # Reemplazar espacios internos con guion bajo para uso en carpetas
-            sanitizada = sanitizar_nombre_carpeta(limpia)
-            senas.append(sanitizada)
-
-    if not senas:
-        raise ValueError(
-            f"El archivo '{ruta_archivo}' está vacío o no contiene señas válidas."
-        )
-
-    # Eliminar duplicados preservando el orden
-    vistas: set[str] = set()
-    senas_unicas: list[str] = []
-    for sena in senas:
-        if sena not in vistas:
-            vistas.add(sena)
-            senas_unicas.append(sena)
-
-    duplicados_eliminados = len(senas) - len(senas_unicas)
-    if duplicados_eliminados > 0:
-        logger.warning(
-            "Se eliminaron %d señas duplicadas del archivo", duplicados_eliminados
-        )
-
-    logger.info("Se cargaron %d señas desde '%s'", len(senas_unicas), ruta_archivo)
-    return senas_unicas
-
-
-def cargar_lista_senas(ruta_archivo: str = ARCHIVO_LISTA_SENAS) -> list[str]:
-    """Carga y valida el archivo de lista de señas.
-
-    Args:
-        ruta_archivo: Ruta al archivo de texto que contiene nombres de señas (una por línea).
-
-    Returns:
-        Lista de nombres de señas (limpios, en minúsculas, no vacíos).
-
-    Raises:
-        FileNotFoundError: Si el archivo de lista de señas no existe.
-        ValueError: Si el archivo de lista de señas está vacío o no tiene entradas válidas.
-    """
-    ruta = Path(ruta_archivo)
-
-    if not ruta.exists():
-        raise FileNotFoundError(
-            f"El archivo de señas '{ruta_archivo}' no existe. "
+            f"El archivo de señas '{ruta.name}' no existe. "
             f"Crea el archivo con una seña por línea."
         )
 

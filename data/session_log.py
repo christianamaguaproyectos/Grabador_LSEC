@@ -43,11 +43,11 @@ class RegistradorSesion:
         _conteo_filas: Numero de filas escritas en esta sesion.
     """
 
-    def __init__(self, ruta_log: str = ARCHIVO_LOG_SESION) -> None:
+    def __init__(self, ruta_log = ARCHIVO_LOG_SESION) -> None:
         """Inicializa el registrador de sesion.
 
         Args:
-            ruta_log: Ruta al archivo de log CSV.
+            ruta_log: Ruta al archivo de log CSV (Path o str).
         """
         self.ruta_log: Path = Path(ruta_log)
         self._archivo: Optional[object] = None

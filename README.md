@@ -222,6 +222,88 @@ Todos los parámetros se encuentran en `config.py`:
 
 ---
 
+## Distribución para Usuarios Finales
+
+El programa puede empaquetarse como un ejecutable Windows que **no requiere Python instalado**.
+
+### Generar el Ejecutable
+
+1. Asegúrese de tener el entorno virtual configurado con las dependencias instaladas
+2. Ejecute el script de build:
+
+```powershell
+.\build.bat
+```
+
+3. El ejecutable se generará en `dist\GrabadorLSEC\`
+
+### Distribución Portátil (Carpeta)
+
+Copie la carpeta completa `dist\GrabadorLSEC\` a la máquina destino. El usuario solo necesita ejecutar `GrabadorLSEC.exe`.
+
+Contenido de la carpeta distribuible:
+
+```
+GrabadorLSEC/
+├── GrabadorLSEC.exe          # Ejecutable principal
+├── lista_senas.txt           # Editable: lista de señas
+├── referencias/              # Editable: imágenes de referencia
+├── _internal/                # Dependencias (NO modificar)
+└── ...                       # Otros archivos de PyInstaller
+```
+
+### Crear Instalador Windows (Opcional)
+
+Para generar un instalador `setup.exe` profesional:
+
+1. Instale [Inno Setup 6+](https://jrsoftware.org/isinfo.php)
+2. Abra `installer\setup.iss` en Inno Setup
+3. Presione **Compile** (Ctrl+F9)
+4. El instalador se generará en `installer\Output\`
+
+El instalador incluye:
+- Acceso directo en el escritorio y menú inicio
+- Desinstalador automático
+- Soporte para español e inglés
+
+### Archivos Editables por el Usuario
+
+| Archivo | Ubicación | Propósito |
+|---------|-----------|-----------|
+| `lista_senas.txt` | Junto al `.exe` | Agregar/quitar señas (una por línea) |
+| `referencias/` | Junto al `.exe` | Imágenes PNG/JPG de referencia visual |
+
+---
+
+## Estructura del Proyecto (Desarrolladores)
+
+```
+grabador_lsec/
+├── main.py                    # Punto de entrada
+├── config.py                  # Configuración centralizada
+├── requirements.txt           # Dependencias Python
+├── grabador_lsec.spec         # Config de PyInstaller
+├── build.bat                  # Script de build automatizado
+├── lista_senas.txt            # 100 señas predefinidas
+├── recorder/                  # Módulos de grabación
+│   ├── camera.py              # Abstracción de cámara
+│   ├── mediapipe_detector.py  # Detector de manos
+│   └── session_recorder.py    # Orquestador de sesión
+├── ui/
+│   └── overlay.py             # Interfaz visual OpenCV
+├── utils/
+│   ├── paths.py               # Resolución de rutas (PyInstaller)
+│   └── validators.py          # Validaciones de entrada
+├── data/
+│   └── session_log.py         # Logger CSV de sesión
+├── referencias/               # Imágenes de referencia (~97 PNG)
+└── installer/
+    └── setup.iss              # Script de Inno Setup
+```
+
+---
+
 ## Licencia
 
 Proyecto académico — ESPE 2026. Uso exclusivo para fines de investigación.
+

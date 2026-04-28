@@ -9,6 +9,14 @@ import cv2
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from utils.paths import get_base_path
+
+
+# ═══════════════════════════════════════
+# RUTA BASE (resuelta dinámicamente)
+# ═══════════════════════════════════════
+
+BASE_PATH: Path = get_base_path()
 
 # ═══════════════════════════════════════
 # CONFIGURACIÓN DE GRABACIÓN
@@ -30,13 +38,14 @@ VIDEO_CODEC: str = "mp4v"
 VIDEO_EXTENSION: str = ".mp4"
 
 # ═══════════════════════════════════════
-# RUTAS Y ARCHIVOS
+# RUTAS Y ARCHIVOS (absolutas, resueltas desde BASE_PATH)
 # ═══════════════════════════════════════
 
-DIRECTORIO_RAIZ_DATASET: str = "dataset"
-ARCHIVO_LISTA_SENAS: str = "lista_senas.txt"
-ARCHIVO_LOG_SESION: str = "session_log.csv"
-DIRECTORIO_REFERENCIAS: str = "referencias"
+DIRECTORIO_RAIZ_DATASET: Path = BASE_PATH / "dataset"
+ARCHIVO_LISTA_SENAS: Path = BASE_PATH / "lista_senas.txt"
+ARCHIVO_LOG_SESION: Path = BASE_PATH / "session_log.csv"
+DIRECTORIO_REFERENCIAS: Path = BASE_PATH / "referencias"
+ARCHIVO_LOG_SISTEMA: Path = BASE_PATH / "grabador_lsec.log"
 
 # ═══════════════════════════════════════
 # CONFIGURACIÓN DE REFERENCIAS
@@ -133,7 +142,7 @@ class ConfiguracionSesion:
 
     def ruta_dataset(self) -> Path:
         """Retorna la ruta raíz del dataset."""
-        return Path(DIRECTORIO_RAIZ_DATASET)
+        return DIRECTORIO_RAIZ_DATASET
 
     def ruta_video(self, nombre_sena: str, numero_repeticion: int) -> Path:
         """Genera la ruta completa para un archivo de video.

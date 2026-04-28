@@ -1,0 +1,23 @@
+# PyInstaller
+build/
+dist/
+
+# Python
+__pycache__/
+venv/
+*.pyc
+*.pyo
+
+# Dataset (generado por la aplicación)
+dataset/
+
+# Logs y sesión
+*.log
+session_log.csv
+
+# Installer output
+installer/Output/
+
+# IDE
+.vscode/
+.idea/

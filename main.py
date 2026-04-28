@@ -17,11 +17,19 @@ import signal
 import sys
 from pathlib import Path
 
+# Forzar UTF-8 en stdout/stderr para compatibilidad con PyInstaller
+# y consolas Windows con codificación cp1252
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+if hasattr(sys.stderr, "reconfigure"):
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
 import cv2
 
 from config import (
     ARCHIVO_LISTA_SENAS,
     ARCHIVO_LOG_SESION,
+    ARCHIVO_LOG_SISTEMA,
     DIRECTORIO_RAIZ_DATASET,
     NOMBRE_VENTANA,
     REPETICIONES_POR_SENA,
@@ -48,7 +56,7 @@ def configurar_logging() -> None:
         handlers=[
             logging.StreamHandler(sys.stdout),
             logging.FileHandler(
-                "grabador_lsec.log", encoding="utf-8", mode="a"
+                str(ARCHIVO_LOG_SISTEMA), encoding="utf-8", mode="a"
             ),
         ],
     )
@@ -245,7 +253,7 @@ def detectar_sesion_previa(
         Tupla (indice_sena, numero_repeticion) desde donde continuar.
     """
     logger = logging.getLogger(__name__)
-    ruta_log = Path(ARCHIVO_LOG_SESION)
+    ruta_log = ARCHIVO_LOG_SESION
 
     if not ruta_log.exists():
         return 0, 1
@@ -254,7 +262,7 @@ def detectar_sesion_previa(
     videos_existentes: dict[str, set[int]] = {}
 
     for sena in lista_senas:
-        ruta_carpeta = Path(DIRECTORIO_RAIZ_DATASET) / sena
+        ruta_carpeta = DIRECTORIO_RAIZ_DATASET / sena
         if ruta_carpeta.exists():
             for archivo in ruta_carpeta.glob(
                 f"{nombre_participante}_rep*{'.mp4'}"
@@ -331,13 +339,13 @@ def main() -> None:
     print("  Cámara detectada correctamente.")
 
     # Paso 2: Cargar lista de señas
-    print(f"\n  [2/4] Cargando lista de señas desde '{ARCHIVO_LISTA_SENAS}'...")
+    print(f"\n  [2/4] Cargando lista de señas desde '{ARCHIVO_LISTA_SENAS.name}'...")
     try:
         lista_senas = cargar_lista_senas()
         print(f"  Se cargaron {len(lista_senas)} señas.")
     except FileNotFoundError as error:
         print(f"\n  ERROR: {error}")
-        print(f"  Cree el archivo '{ARCHIVO_LISTA_SENAS}' con una seña por línea.")
+        print(f"  Cree el archivo '{ARCHIVO_LISTA_SENAS.name}' con una seña por línea.")
         sys.exit(1)
     except ValueError as error:
         print(f"\n  ERROR: {error}")
@@ -372,7 +380,7 @@ def main() -> None:
         sys.exit(0)
 
     # Validar directorio del dataset
-    validar_directorio_dataset(DIRECTORIO_RAIZ_DATASET)
+    validar_directorio_dataset(str(DIRECTORIO_RAIZ_DATASET))
 
     # Configurar sesión
     configuracion = ConfiguracionSesion(

@@ -218,14 +218,14 @@ class GrabadorSesion:
                 continue
 
             # Crear carpeta de la seña
-            ruta_carpeta = Path(DIRECTORIO_RAIZ_DATASET) / nombre_sena
+            ruta_carpeta = DIRECTORIO_RAIZ_DATASET / nombre_sena
             ruta_carpeta.mkdir(parents=True, exist_ok=True)
             self.estadisticas.carpetas_creadas.add(nombre_sena)
 
             # Cargar imagen de referencia si existe
             imagen_referencia = None
-            ruta_ref_jpg = Path(DIRECTORIO_REFERENCIAS) / f"{nombre_sena}.jpg"
-            ruta_ref_png = Path(DIRECTORIO_REFERENCIAS) / f"{nombre_sena}.png"
+            ruta_ref_jpg = DIRECTORIO_REFERENCIAS / f"{nombre_sena}.jpg"
+            ruta_ref_png = DIRECTORIO_REFERENCIAS / f"{nombre_sena}.png"
             
             if ruta_ref_jpg.exists():
                 img = cv2.imread(str(ruta_ref_jpg))
