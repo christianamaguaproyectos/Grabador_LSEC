@@ -133,9 +133,11 @@ def solicitar_senas_a_grabar(lista_senas: list[str]) -> list[str]:
     """Permite elegir qué señas grabar en la sesión.
 
     Opciones:
-        1) Todas las señas.
-        2) Un rango por índice (ej: 10-20).
-        3) Selección puntual por índices o nombres separados por coma.
+        - Enter para todas
+        - Un rango (ej: 10-20)
+        - Índices separados por coma (ej: 1,4,9)
+        - Combinaciones (ej: 1-10, 13-100)
+        - Nombres (ej: hola, gracias)
 
     Args:
         lista_senas: Lista completa de señas disponibles.
@@ -156,82 +158,72 @@ def solicitar_senas_a_grabar(lista_senas: list[str]) -> list[str]:
         mostrar_senas_disponibles(lista_senas)
 
     while True:
-        print("\n  Elija qué señas grabar:")
-        print("    1) Todas")
-        print("    2) Rango por índice (ej: 10-25)")
-        print("    3) Selección puntual (ej: 1,4,9 o hola,gracias)")
-        opcion = input("  Opción [1]: ").strip() or "1"
+        print("\n  Elija qué señas grabar. Formatos válidos:")
+        print("    - Presione ENTER para grabar TODAS")
+        print("    - Un rango: 10-25")
+        print("    - Selección puntual: 1,4,9")
+        print("    - Combinaciones: 1-10, 13-100")
+        print("    - Por nombre: hola, gracias")
+        entrada = input("  Su elección [Todas]: ").strip()
 
-        if opcion == "1":
+        if not entrada or entrada.lower() == "todas":
             return lista_senas
 
-        if opcion == "2":
-            entrada = input("  Ingrese rango inicio-fin: ").strip()
-            if "-" not in entrada:
-                print("  Error: Formato inválido. Use inicio-fin.")
-                continue
+        partes = [p.strip().lower() for p in entrada.split(",")]
+        partes = [p for p in partes if p]
 
-            try:
-                inicio_txt, fin_txt = entrada.split("-", 1)
-                inicio = int(inicio_txt.strip())
-                fin = int(fin_txt.strip())
-            except ValueError:
-                print("  Error: El rango debe contener números válidos.")
-                continue
+        if not partes:
+            continue
 
-            if inicio < 1 or fin < 1 or inicio > fin or fin > total:
-                print(
-                    f"  Error: Use un rango entre 1 y {total}, con inicio <= fin."
-                )
-                continue
+        seleccion: list[str] = []
+        vistos: set[str] = set()
+        hay_error = False
 
-            return lista_senas[inicio - 1:fin]
+        for parte in partes:
+            if "-" in parte and parte.replace("-", "").isdigit():
+                try:
+                    inicio_txt, fin_txt = parte.split("-", 1)
+                    inicio = int(inicio_txt.strip())
+                    fin = int(fin_txt.strip())
 
-        if opcion == "3":
-            entrada = input(
-                "  Ingrese índices o nombres separados por coma: "
-            ).strip()
-            partes = [parte.strip().lower() for parte in entrada.split(",")]
-            partes = [parte for parte in partes if parte]
+                    if inicio < 1 or fin < 1 or inicio > fin or fin > total:
+                        print(f"  Error: Rango '{parte}' inválido. Use índices entre 1 y {total}.")
+                        hay_error = True
+                        break
 
-            if not partes:
-                print("  Error: Debe ingresar al menos una seña.")
-                continue
-
-            seleccion: list[str] = []
-            vistos: set[str] = set()
-
-            if all(parte.isdigit() for parte in partes):
-                indices = [int(parte) for parte in partes]
-                fuera_de_rango = [i for i in indices if i < 1 or i > total]
-                if fuera_de_rango:
-                    print(
-                        f"  Error: Hay índices fuera de rango (1 a {total})."
-                    )
-                    continue
-
-                for indice in indices:
-                    sena = lista_senas[indice - 1]
-                    if sena not in vistos:
-                        vistos.add(sena)
-                        seleccion.append(sena)
-                return seleccion
-
-            no_encontradas = [sena for sena in partes if sena not in mapa_senas]
-            if no_encontradas:
-                print(
-                    "  Error: Señas no encontradas: "
-                    + ", ".join(no_encontradas)
-                )
-                continue
-
-            for sena in partes:
+                    for i in range(inicio - 1, fin):
+                        sena = lista_senas[i]
+                        if sena not in vistos:
+                            vistos.add(sena)
+                            seleccion.append(sena)
+                except ValueError:
+                    print(f"  Error: Rango '{parte}' inválido.")
+                    hay_error = True
+                    break
+            elif parte.isdigit():
+                indice = int(parte)
+                if indice < 1 or indice > total:
+                    print(f"  Error: Índice '{indice}' fuera de rango (1 a {total}).")
+                    hay_error = True
+                    break
+                sena = lista_senas[indice - 1]
                 if sena not in vistos:
                     vistos.add(sena)
-                    seleccion.append(mapa_senas[sena])
-            return seleccion
+                    seleccion.append(sena)
+            else:
+                if parte not in mapa_senas:
+                    print(f"  Error: Seña '{parte}' no encontrada.")
+                    hay_error = True
+                    break
+                sena = mapa_senas[parte]
+                if sena not in vistos:
+                    vistos.add(sena)
+                    seleccion.append(sena)
 
-        print("  Error: Opción inválida. Use 1, 2 o 3.")
+        if hay_error:
+            continue
+
+        return seleccion
 
 
 def detectar_sesion_previa(
